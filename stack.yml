@@ -10,5 +10,10 @@ services:
         image: mariadb
         networks:
               - mynetwork
+        environment:
+             MARIADB_ROOT_PASSWORD: my-secret-root-pw
+             MARIADB_DATABASE: matomo_db
+             MARIADB_USER: matomo_user
+             MARIADB_PASSWORD: my-secret-matomo-pw
 networks:
     mynetwork:
