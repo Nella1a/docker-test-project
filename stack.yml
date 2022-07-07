@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+    mymatomo:
+        image: matomo
+        ports:
+              - 80:80
+        networks:
+              - mynetwork
+    mydatabase:
+        image: mariadb
+        networks:
+              - mynetwork
+networks:
+    mynetwork:
