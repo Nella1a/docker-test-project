@@ -4,6 +4,12 @@ services:
         image: matomo
         ports:
               - 80:80
+        environment:
+              MATOMO_DATABASE_HOST: mydatabase
+              MATOMO_DATABASE_ADAPTER: mysql
+              MATOMO_DATABASE_USERNAME: matomo_user
+              MATOMO_DATABASE_PASSWORD: my-secret-matomo-pw
+              MATOMO_DATABASE_DBNAME: matomo_db
         networks:
               - mynetwork
     mydatabase:
